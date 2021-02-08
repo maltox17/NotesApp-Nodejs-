@@ -1,0 +1,16 @@
+{{#if error}}
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong> {{error}} </strong>
+  <span type="button" id="cerrar" "btn btn-outline-success text-end" data-bs-dismiss="alert" style="font-size:medium; float: inline-end;margin-top: -0.1rem;" >&times;</span>
+</div>
+
+{{/if}}
+
+{{#each errors}}
+
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong> {{text}} </strong>
+  <span type="button" id="cerrar" "btn btn-outline-success text-end" data-bs-dismiss="alert" style="font-size:medium; float: inline-end;margin-top: -0.1rem;" >&times;</span>
+</div>
+
+{{/each}}

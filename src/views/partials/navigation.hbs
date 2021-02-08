@@ -1,33 +1,40 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-      <a class="navbar-brand" href="/">Notes App</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="/">Home<span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="/about">About</a>
-    </div>
-     <ul class="navbar-nav ml-auto">
+    <a class="navbar-brand" href="/">Notes App</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="/">Home<span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="/about">About</a>
+      </div>
+      <ul class="navbar-nav ml-auto">
+        {{#if user}}
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
             Notes
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="/notes">All Notes</a></li>
             <li><a class="dropdown-item" href="/notes/add">Add A Note</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">logout</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="/users/logout">logout</a></li>
           </ul>
+          {{else}}
         </li>
         <li class="nav-item">
-            <a href="/" class="nav-link">Login</a>
+          <a href="/users/signin" class="nav-link">Login</a>
         </li>
         <li class="nav-item">
-            <a href="" class="nav-link">Register</a>
+          <a href="/users/signup" class="nav-link">Register</a>
         </li>
-    </ul>
-  </div>
+        {{/if}}
+      </ul>
+    </div>
   </div>
 </nav>
