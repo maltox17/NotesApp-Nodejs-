@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-   "start": "node src/index.js",
-   "dev": "nodemon src/index.js"
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
   },
   "keywords": [],
   "author": "",
@@ -18,11 +18,13 @@
     "express-session": "^1.17.1",
     "method-override": "^3.0.0",
     "mongoose": "^5.11.15",
+    "morgan": "^1.10.0",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
+    "handlebars": "^4.5.0",
     "nodemon": "^2.0.7",
     "npm-check-updates": "^11.1.1"
   }
