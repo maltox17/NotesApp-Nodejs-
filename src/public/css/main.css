@@ -1,13 +1,27 @@
 body {
-    background: #1488cc;
+  background: linear-gradient(
+    to left,
+    #667db6,
+    #0082c8,
+    #0082c8,
+    #667db6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-#cerrar:hover{
-    color: #ccc;
+#navwood{
+    background: #FFE4CD; 
 }
 
-#user{
-    font-size: 7rem;
-    margin-left: 24%;
-    
+#cerrar:hover {
+  color: #ccc;
+}
+
+#user {
+  font-size: 7rem;
+  margin-left: 24%;
+}
+
+#postit {
+  color: #000;
+  background: #ffc;
 }
